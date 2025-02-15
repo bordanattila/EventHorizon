@@ -4,7 +4,6 @@ import Link from "next/link";
 
 async function getPropsFromServer() {
   const data = await import('../../public/data/data.json')
-  console.log(data)
   return {
     data: data.default,
   };
@@ -12,7 +11,7 @@ async function getPropsFromServer() {
 
 export default async function Home() {
   const { data } = await getPropsFromServer();
-// 
+  // 
   return (
     <div className={styles.page}>
       <header>
@@ -24,7 +23,11 @@ export default async function Home() {
         </nav>
       </header>
       <main className={styles.main}>
-        {data.events_categories.map((ev) => <Link key={ev.id} href={`/event/${ev.id}`}> <Image src={ev.image} alt='event title' width={200} height={200}></Image> <h2>{ev.title}</h2><p>{ev.description}</p></Link>)}
+        {data.events_categories.map((ev) =>
+          <Link key={ev.id} href={`/events/${ev.id}`}>
+            <Image src={ev.image} alt='event title' width={200} height={200}></Image>
+            <h2>{ev.title}</h2><p>{ev.description}</p>
+          </Link>)}
 
       </main>
       <footer className={styles.footer}>
