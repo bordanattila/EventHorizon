@@ -23,7 +23,7 @@ export default async function CategoryPage({ params }: { params: { category: str
       <div>
         {eventsInCategory.length > 0 ? (
           eventsInCategory.map((event) => (
-            <Link key={event.id} href={`/event/${event.id}`}>
+            <Link key={event.id} href={`/events/${event.city.toLowerCase()}/${event.id}`}>
               <div>
                 <Image src={event.image} alt={event.title} width={200} height={200} />
                 <h2>{event.title}</h2>
