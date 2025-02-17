@@ -1,20 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
 
-// Define TypeScript interface for event categories
-interface EventCategory {
-  id: string;
-  title: string;
-  description: string;
-  image: string;
-}
-
-// Fetch data on the server
-async function getData(): Promise<EventCategory[]> {
-  const res = await import('../../../public/data/data.json');
-  return res.events_categories;
-}
-
 export default async function Events() {
   const data = await getData();
   return (

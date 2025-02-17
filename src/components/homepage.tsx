@@ -18,7 +18,8 @@ interface HomePageProps {
 
 const HomePage = ({ data }: HomePageProps) => {
     return (
-        <div className="home_body">
+        <div className="main">
+            <div className="home_body">
             {data.events_categories.map((ev) =>
                 <Link key={ev.id} href={`/events/${ev.id}`} className="card">
                     <div className="image">
@@ -28,6 +29,7 @@ const HomePage = ({ data }: HomePageProps) => {
                         <h2>{ev.title}</h2><p>{ev.description}</p>
                     </div>
                 </Link>)}
+        </div>
         </div>
     )
 }

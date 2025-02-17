@@ -1,5 +1,5 @@
 import styles from "../app/styles/page.module.css";
-import "../app/styles/general.sass"
+import "../app/styles/styles.css"
 import HomePage from '../components/homepage'
 
 
