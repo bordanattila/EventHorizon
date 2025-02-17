@@ -15,15 +15,18 @@ export async function generateStaticParams() {
 export default async function SingleEvent({ params }: { params: { city: string, id: string } }) {
   const { allEvents } = await import("../../../../../public/data/data.json");
 
+  const idParams = await params;
+  const eventId = idParams?.id;
+
   // Filter events based on id
-  const singleEvent = allEvents.find((event) => event.id === params.id);
+  const singleEvent = allEvents.find((event) => event.id === eventId);
 
   if (!singleEvent) {
     return <h1>Event Not Found</h1>;
   }
 
   return (
-    <div>
+    <div className="">
       <h1>{singleEvent.title}</h1>
       <div>
         <Image src={singleEvent.image} alt={singleEvent.title} width={200} height={200} />

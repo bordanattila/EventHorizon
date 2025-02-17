@@ -6,7 +6,7 @@ export async function generateStaticParams() {
   const { events_categories } = await import("../../../../public/data/data.json");
 
   return events_categories.map((category) => ({
-    category: category.id, 
+    params: { category: category.id },
   }));
 }
 
@@ -14,16 +14,25 @@ export async function generateStaticParams() {
 export default async function CategoryPage({ params }: { params: { category: string } }) {
   const { allEvents } = await import("../../../../public/data/data.json");
 
+  const categoryParams = await params;
+  const category = categoryParams?.category?.toLowerCase();
+
+  if (!category) {
+    return (
+    <h1>Error: Category not found</h1>
+    )
+  }
+
   // Filter events based on the selected category (city)
-  const eventsInCategory = allEvents.filter((event) => event.city.toLowerCase() === params.category.toLowerCase());
+  const eventsInCategory = allEvents.filter((event) => event.city.toLowerCase() === category.toLowerCase());
 
   return (
-    <div>
-      <h1>Events in {params.category}</h1>
-      <div>
+    <div className="cat_events">
+      <h1>Events in {category}</h1>
+      <div className="content">
         {eventsInCategory.length > 0 ? (
           eventsInCategory.map((event) => (
-            <Link key={event.id} href={`/events/${event.city.toLowerCase()}/${event.id}`}>
+            <Link key={event.id} href={`/events/${event.city.toLowerCase()}/${event.id}`} className="card">
               <div>
                 <Image src={event.image} alt={event.title} width={200} height={200} />
                 <h2>{event.title}</h2>

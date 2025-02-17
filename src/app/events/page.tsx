@@ -20,11 +20,11 @@ export default async function Events() {
   return (
     <div>
       <h1>Events</h1>
-      <div>
+      <div className='events_page'>
         {data.map((ev) => (
-          <Link key={ev.id} href={`/events/${ev.id}`}>
-            <Image src={ev.image} alt="image" width={200} height={200} />
+          <Link key={ev.id} href={`/events/${ev.id}`} className='card'>
             <h2>{ev.title}</h2>
+            <Image src={ev.image} alt="image" width={200} height={200} />
           </Link>
         ))}
       </div>
