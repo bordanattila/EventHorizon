@@ -1,40 +1,63 @@
+"use client"
+
 import Image from "next/image";
-// import { useRouter } from "next/navigation";
-import React, { useRef, useState } from "react";
+import { useParams } from "next/navigation";
+import React, { useRef, useState, useEffect } from "react";
 
-// Generate static paths for each event
-export async function generateStaticParams() {
-  const { allEvents } = await import("../../../../../public/data/data.json");
-
-  return allEvents.map((eventId) => ({
-    id: eventId.id,
-    city: eventId.city.toLowerCase()
-  }));
+interface Event {
+  id: string;
+  city: string;
+  title: string;
+  image: string;
+  description: string;
 }
 
 // Dynamic page for event
-export default async function SingleEvent({ params }: { params: { city: string, id: string } }) {
-  const { allEvents } = await import("../../../../../public/data/data.json");
+export default function SingleEvent() {
+  // Unwrap params 
+  const params = useParams(); 
+  const city = params?.category as string | undefined;
+  const id = params?.id as string | undefined;
+  console.log(city, id);
+  console.log("Params:", params);
 
-  const idParams = await params;
-  const eventId = idParams?.id;
-
-  // Filter events based on id
-  const singleEvent = allEvents.find((event) => event.id === eventId);
-
-  if (!singleEvent) {
-    return <h1>Event Not Found</h1>;
-  }
-
-  const inputEmail = useRef<HTMLInputElement>(null);
-  // const router = useRouter();
-  const [message, setMessage] = useState<string | null>(null);
+  const [event, setEvent] = useState<Event | null>(null);
   const [error, setError] = useState<string | null>(null);
+  const inputEmail = useRef<HTMLInputElement>(null);
+
+  useEffect(() => {
+    if (!city || !id) return;
+
+    async function fetchEvent() {
+      try {
+        const { allEvents } = await import("../../../../../public/data/data.json");
+        console.log(allEvents)
+        console.log(city, id);
+        const singleEvent = allEvents.find(
+          (event) => event.id === id && event.city?.toLowerCase() === city?.toLowerCase()
+        );
+        console.log("singleEvent:", singleEvent);
+        if (!singleEvent) throw new Error("Event not found");
+
+        setEvent(singleEvent);
+      } catch (error: any) {
+        if (error instanceof Error) {
+          setError(error.message);
+        } else {
+          setError("An unknown error occurred");
+        }
+      }
+    }
+
+    fetchEvent();
+  }, [id, city]);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const email = inputEmail.current?.value;
-    
+    // Get the email value from the input field
+    const email = inputEmail.current?.value.trim();
+
+     // Validate the email
     if (!email) {
       setError("Please enter a valid email address");
       return;
@@ -45,37 +68,38 @@ export default async function SingleEvent({ params }: { params: { city: string, 
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({ email, eventId })
+        },
+        body: JSON.stringify({ email, eventId: id })
       })
-      if(!response.ok) {
+      if (!response.ok) {
         throw new Error(`Error: ${response.status}`)
       }
       const data = await response.json();
-      setMessage(data.message);
+      alert(data.message);
     } catch (error: any) {
-        setError(`Error: ${error.message}`)
+      setError(`Error: ${error.message}`)
     }
   }
 
+  if (error) return <p>Error: {error}</p>;
+  if (!event) return <p>Loading...</p>;
 
-   return (
+  return (
     <div className="event_single_page">
-      <h1>{singleEvent.title}</h1>
+      <h1>{event.title}</h1>
       <div>
-        <Image src={singleEvent.image} alt={singleEvent.title} width={200} height={200} />
-        <p>{singleEvent.description}</p>
+        <Image src={event.image} alt={event.title} width={200} height={200} />
+        <p>{event.description}</p>
         <form onSubmit={handleSubmit} className="email_registration">
-        <label> Get Registered for this event!</label>
-        <input
-          ref={inputEmail}
-          type="email"
-          id="email"
-          placeholder="Please insert your email here"
-        />
-        <button type="submit"> Submit</button>
-      </form>
-      <p>{message}</p>
+          <label> Get Registered for this event!</label>
+          <input
+            ref={inputEmail}
+            type="email"
+            id="email"
+            placeholder="Please insert your email here"
+          />
+          <button type="submit"> Submit</button>
+        </form>
       </div>
     </div>
   )

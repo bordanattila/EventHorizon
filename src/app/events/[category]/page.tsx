@@ -37,6 +37,8 @@ export default async function CategoryPage({ params }: { params: { category: str
                 <Image src={event.image} alt={event.title} width={200} height={200} />
                 <h2>{event.title}</h2>
                 <p>{event.description}</p>
+                <p>{event.city}</p>
+                <p>{event.id}</p>
               </div>
             </Link>
           ))
