@@ -7,7 +7,7 @@ interface EventCategory {
   }
   
   // Fetch data on the server
-  async function getData(): Promise<EventCategory[]> {
+  export async function getData(): Promise<EventCategory[]> {
     const res = await import('../../../public/data/data.json');
     return res.events_categories;
   }

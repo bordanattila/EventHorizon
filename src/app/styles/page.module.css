@@ -6,13 +6,13 @@
   --button-primary-hover: #383838;
   --button-secondary-hover: #f2f2f2;
 
-  display: grid;
-  /* grid-template-rows: 20px 1fr 20px; */
+  /* display: grid;
+  grid-template-rows: 20px 1fr 20px;
   align-items: center;
   justify-items: center;
   min-height: 100svh;
   padding: 80px;
-  gap: 64px;
+  gap: 64px; */
   font-family: var(--font-geist-sans);
 }
 
@@ -27,7 +27,15 @@
   }
 }
 
-.main {
+@media (max-width: 600px) {
+  .page {
+      padding: 32px;
+      padding-bottom: 80px;
+  }
+}
+
+
+/* .main {
   display: flex;
   flex-direction: column;
   gap: 32px;
@@ -79,7 +87,7 @@
   font-size: 16px;
   line-height: 20px;
   font-weight: 500;
-}
+} */
 
 a.primary {
   background: var(--foreground);
@@ -92,7 +100,7 @@ a.secondary {
   min-width: 180px;
 }
 
-.footer {
+/* .footer {
   grid-row-start: 3;
   display: flex;
   gap: 24px;
@@ -106,7 +114,7 @@ a.secondary {
 
 .footer img {
   flex-shrink: 0;
-}
+} */
 
 /* Enable hover only on non-touch devices */
 @media (hover: hover) and (pointer: fine) {
@@ -132,7 +140,7 @@ a.secondary {
     padding-bottom: 80px;
   }
 
-  .main {
+  /* .main {
     align-items: center;
   }
 
@@ -158,7 +166,7 @@ a.secondary {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-  }
+  } */
 }
 
 @media (prefers-color-scheme: dark) {

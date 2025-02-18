@@ -16,10 +16,11 @@ export default async function CategoryPage({ params }: { params: { category: str
 
   const categoryParams = await params;
   const category = categoryParams?.category?.toLowerCase();
+  const event_city = category.charAt(0).toUpperCase() + category.slice(1);
 
   if (!category) {
     return (
-    <h1>Error: Category not found</h1>
+      <h1>Error: Category not found</h1>
     )
   }
 
@@ -27,19 +28,33 @@ export default async function CategoryPage({ params }: { params: { category: str
   const eventsInCategory = allEvents.filter((event) => event.city.toLowerCase() === category.toLowerCase());
 
   return (
-    <div className="cat_events">
-      <h1>Events in {category}</h1>
-      <div className="content">
+    <div>
+      <h1 className='locations'>Events in {event_city}</h1>
+      <div className="home_body">
         {eventsInCategory.length > 0 ? (
-          eventsInCategory.map((event) => (
-            <Link key={event.id} href={`/events/${event.city.toLowerCase()}/${event.id}`} className="card">
-              <div>
-                <Image src={event.image} alt={event.title} width={200} height={200} />
-                <h2>{event.title}</h2>
-                <p>{event.description}</p>
-                <p>{event.city}</p>
-                <p>{event.id}</p>
+          eventsInCategory.map((event, index) => (
+            <Link
+              key={event.id}
+              href={`/events/${event.city.toLowerCase()}/${event.id}`}
+              className={`card ${index % 2 === 1 ? 'card-reverse' : ''}`}
+            >
+              <div
+                className="image"
+                style={{ width: '50%', aspectRatio: '16/9', position: 'relative' }}
+              >
+                <Image
+                  src={event.image}
+                  alt={event.title}
+                  sizes='(max-width: 768px) 50dvw, 100%'
+                  style={{ objectFit: 'cover' }}
+                  fill
+                  priority
+                />
               </div>
+                <div className="content">
+                  <h2>{event.title}</h2>
+                  <p>{event.description}</p>
+                </div>
             </Link>
           ))
         ) : (

@@ -15,7 +15,7 @@ interface Event {
 // Dynamic page for event
 export default function SingleEvent() {
   // Unwrap params 
-  const params = useParams(); 
+  const params = useParams();
   const city = params?.category as string | undefined;
   const id = params?.id as string | undefined;
   console.log(city, id);
@@ -57,7 +57,7 @@ export default function SingleEvent() {
     // Get the email value from the input field
     const email = inputEmail.current?.value.trim();
 
-     // Validate the email
+    // Validate the email
     if (!email) {
       setError("Please enter a valid email address");
       return;
@@ -85,22 +85,38 @@ export default function SingleEvent() {
   if (!event) return <p>Loading...</p>;
 
   return (
-    <div className="event_single_page">
-      <h1>{event.title}</h1>
-      <div>
-        <Image src={event.image} alt={event.title} width={200} height={200} />
+    <div>
+      <div className="content locations">
+        <h1>{event.title}</h1>
+      </div>
+    <div className='single_event_page'>
+      <div
+        className="image"
+        style={{ width: '50%', aspectRatio: '16/9', position: 'relative' }}
+      >
+        <Image
+          src={event.image}
+          alt={event.title}
+          sizes='(max-width: 768px) 50dvw, 100%'
+          style={{ objectFit: 'cover' }}
+          fill
+          priority
+          />
+          </div>
+        <div className="content locations">
         <p>{event.description}</p>
+        </div>
         <form onSubmit={handleSubmit} className="email_registration">
           <label> Get Registered for this event!</label>
           <input
             ref={inputEmail}
             type="email"
             id="email"
-            placeholder="Please insert your email here"
+            placeholder="Please enter your email"
           />
           <button type="submit"> Submit</button>
         </form>
-      </div>
+    </div>
     </div>
   )
 
