@@ -97,7 +97,7 @@
       "id": "sf-blockchain-week",
       "title": "SF Blockchain Week",
       "city": "san-francisco",
-      "description": "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscisfa.",
+      "description": "SF Blockchain Week is a premier gathering for blockchain enthusiasts, developers, and industry leaders. This event showcases the latest innovations in decentralized technologies, Web3 applications, and crypto ecosystems through keynote speeches, panel discussions, and hands-on workshops. Whether you're a seasoned blockchain professional or a newcomer, this week-long event provides valuable networking opportunities and insights into the future of decentralized finance and technology.",
       "image": "https://images.unsplash.com/photo-1516245834210-c4c142787335?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80",
       "emails_registered": [
         "laura@gmail.com"
@@ -107,7 +107,7 @@
       "id": "innovation-summit-san-francisco",
       "title": "Innovation Summit San Francisco",
       "city": "san-francisco",
-      "description": "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscisfa.",
+      "description": "The Innovation Summit San Francisco brings together visionaries, entrepreneurs, and investors to explore groundbreaking advancements across industries. Featuring keynote speakers from top tech companies and emerging startups, this summit highlights the latest trends in AI, fintech, sustainability, and digital transformation. Attendees will gain valuable knowledge through interactive panels, networking sessions, and product showcases designed to inspire the next wave of innovation.",
       "image": "https://images.unsplash.com/photo-1521464302861-ce943915d1c3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80",
       "emails_registered": []
     },
@@ -115,7 +115,7 @@
       "id": "fan-expo-san-francisco",
       "title": "FAN EXPO San Francisco",
       "city": "san-francisco",
-      "description": "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscisfa.",
+      "description": "FAN EXPO San Francisco is the ultimate pop culture convention, celebrating comics, anime, gaming, and sci-fi fandoms. With celebrity guests, artist alley, cosplay contests, and immersive experiences, this event offers something for fans of all ages. Whether you're meeting your favorite stars, shopping for exclusive merchandise, or participating in gaming tournaments, FAN EXPO is the perfect place to embrace your fandom and connect with like-minded enthusiasts.",
       "image": "https://images.unsplash.com/photo-1608889825103-eb5ed706fc64?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80",
       "emails_registered": []
     },
@@ -123,15 +123,15 @@
       "id": "san-francisco-opera---san-francisco-tickets",
       "title": "San Francisco Opera - San Francisco Tickets",
       "city": "san-francisco",
-      "description": "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscisfa.",
+      "description": "Experience the magic of opera in the heart of San Francisco at the iconic War Memorial Opera House. The San Francisco Opera presents world-class performances featuring breathtaking music, stunning stage designs, and powerful storytelling. Whether you're a longtime opera lover or new to the art form, each performance offers an unforgettable cultural experience that showcases the beauty and drama of opera at its finest.",
       "image": "https://images.unsplash.com/photo-1580809361436-42a7ec204889?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80",
       "emails_registered": []
     },
     {
-      "id": "concert-christian-löffler-+-detect-ensemble",
-      "title": "Concert Christian Löffler + Detect Ensemble",
+      "id": "fc-barcelona-vs-real-madrid---el-clásico",
+      "title": "FC Barcelona vs Real Madrid – El Clásico",
       "city": "barcelona",
-      "description": "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscisfa.",
+      "description": "One of the most anticipated football matches in the world, El Clásico brings FC Barcelona and Real Madrid face-to-face in an electrifying battle at Spotify Camp Nou. Witness the intensity, skill, and rivalry between two of the biggest clubs in football history as they compete for dominance in La Liga. With star players, passionate fans, and an atmosphere like no other, this is a match every football lover must experience live in Barcelona!",
       "image": "https://images.unsplash.com/photo-1478147427282-58a87a120781?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
       "emails_registered": [
         "alicia@gmail.com",
@@ -142,7 +142,7 @@
       "id": "the-halloween-house-party",
       "title": "The Halloween House Party",
       "city": "barcelona",
-      "description": "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscisfa.",
+      "description": "Get ready for a night of thrills, chills, and unforgettable beats at Barcelona’s most electrifying Halloween House Party! Featuring top DJs, eerie decorations, and a spine-tingling atmosphere, this event is the ultimate way to celebrate Halloween in the heart of the city. Dress up in your best costume, dance the night away, and enjoy a night filled with spooky surprises, themed cocktails, and an unbeatable party vibe!",
       "image": "https://images.unsplash.com/photo-1587407627257-27b7127c868c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
       "emails_registered": [
         "alicia@gmail.com",
@@ -155,7 +155,7 @@
       "id": "international-conference-on-industrial-design",
       "title": "International Conference on Industrial Design",
       "city": "barcelona",
-      "description": "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscisfa.",
+      "description": "The International Conference on Industrial Design in Barcelona brings together designers, engineers, and industry professionals to explore the latest trends and innovations in product design, sustainability, and user experience. Through keynote speeches, panel discussions, and interactive workshops, attendees will gain insights into cutting-edge design solutions and technological advancements shaping the future of industrial design.",
       "image": "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
       "emails_registered": [
         "alicia@gmail.com",
@@ -163,10 +163,10 @@
       ]
     },
     {
-      "id": "world-congress-2022---barcelona",
-      "title": "World Congress 2022 - Barcelona",
+      "id": "world-congress-2025---barcelona",
+      "title": "World Congress 2025 - Barcelona",
       "city": "barcelona",
-      "description": "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscisfa.",
+      "description": "Barcelona welcomes global leaders, policymakers, and innovators to the prestigious World Congress 2025, an event that fosters collaboration across industries. This congress covers key topics such as technology, sustainability, healthcare, and economic development, featuring influential speakers, networking opportunities, and forward-thinking discussions. It’s the perfect platform for shaping the future through knowledge sharing and strategic partnerships.",
       "image": "https://images.unsplash.com/photo-1540575467063-178a50c2df87?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
       "emails_registered": [
         "alicia@gmail.com",
@@ -177,7 +177,7 @@
       "id": "riskminds-international",
       "title": "RiskMinds International",
       "city": "barcelona",
-      "description": "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscisfa.",
+      "description": "RiskMinds International is the world’s leading conference for risk management professionals, bringing together top minds in banking, insurance, and investment. Held in Barcelona, this event features expert-led discussions on financial risk, regulatory changes, AI-driven risk solutions, and global economic trends. With in-depth panels, networking sessions, and practical insights, RiskMinds International is a must-attend event for anyone in the financial risk sector.",
       "image": "https://images.unsplash.com/photo-1591115765373-5207764f72e7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
       "emails_registered": [
         "alicia@gmail.com",

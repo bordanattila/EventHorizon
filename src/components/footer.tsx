@@ -4,7 +4,7 @@ const Footer = () => {
             <div className="container">
                 <div className="row">
                     <div className="col-md-12">
-                        <p className="text-center">Copyright &copy; 2025</p>
+                        <p className="text-center">Created by Attila with Next.js and TypeScript</p>
                     </div>
                 </div>
             </div>
