@@ -1,191 +1,342 @@
 {
-    "events_categories": [
-        {
-            "id": "london",
-            "title": "London – A City of Endless Possibilities",
-            "description": "From West End theater shows to world-class music festivals, London's event scene is unmatched. Explore art exhibitions, networking events, and sports matches that make this city a global hub of entertainment.",
-            "image": "https://images.unsplash.com/photo-1533929736458-ca588d08c8be?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
-        },
-        {
-            "id": "san-francisco",
-            "title": "San Francisco – Innovation Meets Entertainment",
-            "description": "The heart of Silicon Valley offers more than just tech conferences. Discover outdoor festivals, food fairs, startup networking events, and concerts in the Golden City.",
-            "image": "https://images.unsplash.com/photo-1506146332389-18140dc7b2fb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80"
-        },
-        {
-            "id": "barcelona",
-            "title": "Barcelona – Where Culture and Fun Collide",
-            "description": "Barcelona is home to stunning architecture and vibrant nightlife. Experience international music festivals, traditional Catalan celebrations, and art expos in this Mediterranean hotspot.",
-            "image": "https://images.unsplash.com/photo-1579282240050-352db0a14c21?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=652&q=80"
-        },
-        {
-            "id": "Budapest",
-            "title": "Budapest – The Gem of Central Europe",
-            "description": "From its famous ruin bars to thermal spa parties, Budapest offers unique experiences you won’t find anywhere else. Attend film festivals, jazz nights, and historical tours in this stunning city.",
-            "image": "https://images.unsplash.com/photo-1551867633-194f125bddfa?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8YnVkYXBlc3R8ZW58MHx8MHx8fDA%3D"
-        },
-        {
-            "id": "Singapore",
-            "title": "Singapore – The City That Never Sleeps",
-            "description": "Singapore hosts some of the most exclusive events, from tech summits to luxury fashion showcases. Whether you're into business networking, nightlife, or cultural exhibitions, there’s always something happening.",
-            "image": "https://images.unsplash.com/photo-1525625293386-3f8f99389edd?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8c2luZ2Fwb3JlfGVufDB8fDB8fHww"
-        },
-        {
-            "id": "Tokyo",
-            "title": "Tokyo – Tradition Meets the Future",
-            "description": "Tokyo’s event scene is a perfect blend of modern and traditional. Enjoy anime conventions, sumo wrestling tournaments, fashion week, and high-tech expos in the heart of Japan.",
-            "image": "https://plus.unsplash.com/premium_photo-1661902398022-762e88ff3f82?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8dG9reW98ZW58MHx8MHx8fDA%3D"
-        }
-    ],
-    "allEvents": [
-        {
-            "id": "london-comic-con-winter",
-            "title": "London Comic Con Winter",
-            "city": "London",
-            "description": "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscisfa.",
-            "image": "https://images.unsplash.com/photo-1608889476561-6242cfdbf622?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80",
-            "emails_registered": []
-        },
-        {
-            "id": "hyde-park-winter-wonderland",
-            "title": "Hyde Park Winter Wonderland",
-            "city": "London",
-            "description": "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscisfa.",
-            "image": "https://hydeparkwinterwonderland.com/static/252d7fe6693a6a8b1887bd2049204103/039f7/2021-503x503-3.webp",
-            "emails_registered": []
-        },
-        {
-            "id": "new-years-eve-in-london-2023",
-            "title": "New Years Eve in London 2023 ",
-            "city": "London",
-            "description": "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscisfa.",
-            "image": "https://images.unsplash.com/photo-1521478413868-1bbd982fa4a5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
-            "emails_registered": []
-        },
-        {
-            "id": "'edtech-world-summit-2022",
-            "title": "EdTech World Summit 2022",
-            "city": "london",
-            "description": "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscisfa.",
-            "image": "https://images.unsplash.com/photo-1540575467063-178a50c2df87?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
-            "emails_registered": [
-                "alicia@gmail.com",
-                "monica@gmail.com"
-            ]
-        },
-        {
-            "id": "sigala-at-electric-brixton",
-            "title": "Sigala at Electric Brixton",
-            "city": "london",
-            "description": "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscisfa.",
-            "image": "https://images.unsplash.com/photo-1478147427282-58a87a120781?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
-            "emails_registered": [
-                "monica@gmail.com"
-            ]
-        },
-        {
-            "id": "kiss-haunted-house-party-2022",
-            "title": "KISS Haunted House Party 2022",
-            "city": "london",
-            "description": "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscisfa.",
-            "image": "https://wembleypark.com/media/images/KISS-HHP-42-1440x810-Logos-Date-de.2e16d0ba.fill-496x279.jpg",
-            "emails_registered": []
-        },
-        {
-            "id": "sf-blockchain-week",
-            "title": "SF Blockchain Week",
-            "city": "san-francisco",
-            "description": "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscisfa.",
-            "image": "https://images.unsplash.com/photo-1516245834210-c4c142787335?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80",
-            "emails_registered": [
-                "",
-                "",
-                "",
-                "laura@gmail.com",
-                "laura@gmail.com",
-                "laura@gmail.com"
-            ]
-        },
-        {
-            "id": "innovation-summit-san-francisco",
-            "title": "Innovation Summit San Francisco",
-            "city": "san-francisco",
-            "description": "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscisfa.",
-            "image": "https://images.unsplash.com/photo-1521464302861-ce943915d1c3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80",
-            "emails_registered": []
-        },
-        {
-            "id": "fan-expo-san-francisco",
-            "title": "FAN EXPO San Francisco",
-            "city": "san-francisco",
-            "description": "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscisfa.",
-            "image": "https://images.unsplash.com/photo-1608889825103-eb5ed706fc64?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80",
-            "emails_registered": []
-        },
-        {
-            "id": "san-francisco-opera---san-francisco-tickets",
-            "title": "San Francisco Opera - San Francisco Tickets",
-            "city": "san-francisco",
-            "description": "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscisfa.",
-            "image": "https://images.unsplash.com/photo-1580809361436-42a7ec204889?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80",
-            "emails_registered": []
-        },
-        {
-            "id": "concert-christian-löffler-+-detect-ensemble",
-            "title": "Concert Christian Löffler + Detect Ensemble",
-            "city": "barcelona",
-            "description": "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscisfa.",
-            "image": "https://images.unsplash.com/photo-1478147427282-58a87a120781?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
-            "emails_registered": [
-                "alicia@gmail.com",
-                "monica@gmail.com"
-            ]
-        },
-        {
-            "id": "the-halloween-house-party",
-            "title": "The Halloween House Party",
-            "city": "barcelona",
-            "description": "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscisfa.",
-            "image": "https://images.unsplash.com/photo-1587407627257-27b7127c868c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
-            "emails_registered": [
-                "alicia@gmail.com",
-                "monica@gmail.com",
-                "david@yahoo.com",
-                "claire@ss.com"
-            ]
-        },
-        {
-            "id": "international-conference-on-industrial-design",
-            "title": "International Conference on Industrial Design",
-            "city": "barcelona",
-            "description": "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscisfa.",
-            "image": "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
-            "emails_registered": [
-                "alicia@gmail.com",
-                "monica@gmail.com"
-            ]
-        },
-        {
-            "id": "world-congress-2022---barcelona",
-            "title": "World Congress 2022 - Barcelona",
-            "city": "barcelona",
-            "description": "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscisfa.",
-            "image": "https://images.unsplash.com/photo-1540575467063-178a50c2df87?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
-            "emails_registered": [
-                "alicia@gmail.com",
-                "monica@gmail.com"
-            ]
-        },
-        {
-            "id": "riskminds-international",
-            "title": "RiskMinds International",
-            "city": "barcelona",
-            "description": "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscisfa.",
-            "image": "https://images.unsplash.com/photo-1591115765373-5207764f72e7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
-            "emails_registered": [
-                "alicia@gmail.com",
-                "monica@gmail.com"
-            ]
-        }
-    ]
+  "events_categories": [
+    {
+      "id": "london",
+      "title": "London – A City of Endless Possibilities",
+      "description": "From West End theater shows to world-class music festivals, London's event scene is unmatched. Explore art exhibitions, networking events, and sports matches that make this city a global hub of entertainment.",
+      "image": "https://images.unsplash.com/photo-1533929736458-ca588d08c8be?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+    },
+    {
+      "id": "san-francisco",
+      "title": "San Francisco – Innovation Meets Entertainment",
+      "description": "The heart of Silicon Valley offers more than just tech conferences. Discover outdoor festivals, food fairs, startup networking events, and concerts in the Golden City.",
+      "image": "https://images.unsplash.com/photo-1506146332389-18140dc7b2fb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80"
+    },
+    {
+      "id": "barcelona",
+      "title": "Barcelona – Where Culture and Fun Collide",
+      "description": "Barcelona is home to stunning architecture and vibrant nightlife. Experience international music festivals, traditional Catalan celebrations, and art expos in this Mediterranean hotspot.",
+      "image": "https://images.unsplash.com/photo-1579282240050-352db0a14c21?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=652&q=80"
+    },
+    {
+      "id": "Budapest",
+      "title": "Budapest – The Gem of Central Europe",
+      "description": "From its famous ruin bars to thermal spa parties, Budapest offers unique experiences you won’t find anywhere else. Attend film festivals, jazz nights, and historical tours in this stunning city.",
+      "image": "https://images.unsplash.com/photo-1551867633-194f125bddfa?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8YnVkYXBlc3R8ZW58MHx8MHx8fDA%3D"
+    },
+    {
+      "id": "Singapore",
+      "title": "Singapore – The City That Never Sleeps",
+      "description": "Singapore hosts some of the most exclusive events, from tech summits to luxury fashion showcases. Whether you're into business networking, nightlife, or cultural exhibitions, there’s always something happening.",
+      "image": "https://images.unsplash.com/photo-1525625293386-3f8f99389edd?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8c2luZ2Fwb3JlfGVufDB8fDB8fHww"
+    },
+    {
+      "id": "Tokyo",
+      "title": "Tokyo – Tradition Meets the Future",
+      "description": "Tokyo’s event scene is a perfect blend of modern and traditional. Enjoy anime conventions, sumo wrestling tournaments, fashion week, and high-tech expos in the heart of Japan.",
+      "image": "https://plus.unsplash.com/premium_photo-1661902398022-762e88ff3f82?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8dG9reW98ZW58MHx8MHx8fDA%3D"
+    }
+  ],
+  "allEvents": [
+    {
+      "id": "london-comic-con-winter",
+      "title": "London Comic Con Winter",
+      "city": "London",
+      "description": "Get ready for an action-packed weekend at London Comic Con Winter, where pop culture comes to life! Meet your favorite comic book artists, actors, and creators, explore exclusive merchandise, and participate in cosplay competitions. Whether you're a fan of Marvel, DC, anime, or gaming, this is the ultimate event to celebrate all things geeky.",
+      "image": "https://images.unsplash.com/photo-1608889476561-6242cfdbf622?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80",
+      "emails_registered": [
+        "mail.mail@com"
+      ]
+    },
+    {
+      "id": "hyde-park-winter-wonderland",
+      "title": "Hyde Park Winter Wonderland",
+      "city": "London",
+      "description": "Experience the magic of the holiday season at Hyde Park Winter Wonderland, London’s most spectacular Christmas festival! Enjoy ice skating, thrilling fairground rides, circus performances, and festive food and drink stalls. Wander through the Christmas markets, sip on mulled wine, and soak in the festive atmosphere with live entertainment. A must-visit destination for holiday cheer!",
+      "image": "https://hydeparkwinterwonderland.com/static/252d7fe6693a6a8b1887bd2049204103/039f7/2021-503x503-3.webp",
+      "emails_registered": []
+    },
+    {
+      "id": "new-years-eve-in-london-2025",
+      "title": "New Years Eve in London 2025 ",
+      "city": "London",
+      "description": "Ring in 2025 in the heart of London with an unforgettable New Year's Eve celebration! Watch the world-famous fireworks display over the Thames, join exclusive parties across the city, or take in breathtaking views from the London Eye. Whether you're celebrating in a lively club or on a scenic dinner cruise, London offers an electric atmosphere to welcome the new year in style.",
+      "image": "https://images.unsplash.com/photo-1521478413868-1bbd982fa4a5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+      "emails_registered": []
+    },
+    {
+      "id": "'edtech-world-summit-2025",
+      "title": "EdTech World Summit 2025",
+      "city": "london",
+      "description": "Join the brightest minds in education technology at the EdTech World Summit 2025 in London. This global conference brings together educators, innovators, and industry leaders to explore the future of learning. Featuring keynote speeches, panel discussions, and hands-on workshops, the summit covers AI in education, online learning trends, and the latest advancements in edtech.",
+      "image": "https://images.unsplash.com/photo-1540575467063-178a50c2df87?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+      "emails_registered": [
+        "alicia@gmail.com",
+        "monica@gmail.com"
+      ]
+    },
+    {
+      "id": "sigala-at-electric-brixton",
+      "title": "Sigala at Electric Brixton",
+      "city": "london",
+      "description": "Get ready for an electrifying night as Sigala takes the stage at Electric Brixton! The chart-topping DJ and producer will bring his signature dance-pop anthems to London, delivering an unforgettable set packed with hits like Easy Love, Came Here for Love, and Sweet Lovin'. Expect high-energy vibes, stunning visuals, and a crowd ready to dance the night away.",
+      "image": "https://images.unsplash.com/photo-1478147427282-58a87a120781?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+      "emails_registered": [
+        "monica@gmail.com"
+      ]
+    },
+    {
+      "id": "kiss-haunted-house-party-2025",
+      "title": "KISS Haunted House Party 2025",
+      "city": "london",
+      "description": "Prepare for the ultimate Halloween bash at the KISS Haunted House Party 2025! Hosted by KISS FM, this annual event brings together top artists for a night of spooky fun, live performances, and the best costumes in town. With a lineup featuring some of the biggest names in music, this is the perfect way to celebrate Halloween with a mix of beats and scares.",
+      "image": "https://wembleypark.com/media/images/KISS-HHP-42-1440x810-Logos-Date-de.2e16d0ba.fill-496x279.jpg",
+      "emails_registered": []
+    },
+    {
+      "id": "sf-blockchain-week",
+      "title": "SF Blockchain Week",
+      "city": "san-francisco",
+      "description": "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscisfa.",
+      "image": "https://images.unsplash.com/photo-1516245834210-c4c142787335?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80",
+      "emails_registered": [
+        "laura@gmail.com"
+      ]
+    },
+    {
+      "id": "innovation-summit-san-francisco",
+      "title": "Innovation Summit San Francisco",
+      "city": "san-francisco",
+      "description": "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscisfa.",
+      "image": "https://images.unsplash.com/photo-1521464302861-ce943915d1c3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80",
+      "emails_registered": []
+    },
+    {
+      "id": "fan-expo-san-francisco",
+      "title": "FAN EXPO San Francisco",
+      "city": "san-francisco",
+      "description": "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscisfa.",
+      "image": "https://images.unsplash.com/photo-1608889825103-eb5ed706fc64?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80",
+      "emails_registered": []
+    },
+    {
+      "id": "san-francisco-opera---san-francisco-tickets",
+      "title": "San Francisco Opera - San Francisco Tickets",
+      "city": "san-francisco",
+      "description": "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscisfa.",
+      "image": "https://images.unsplash.com/photo-1580809361436-42a7ec204889?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80",
+      "emails_registered": []
+    },
+    {
+      "id": "concert-christian-löffler-+-detect-ensemble",
+      "title": "Concert Christian Löffler + Detect Ensemble",
+      "city": "barcelona",
+      "description": "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscisfa.",
+      "image": "https://images.unsplash.com/photo-1478147427282-58a87a120781?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+      "emails_registered": [
+        "alicia@gmail.com",
+        "monica@gmail.com"
+      ]
+    },
+    {
+      "id": "the-halloween-house-party",
+      "title": "The Halloween House Party",
+      "city": "barcelona",
+      "description": "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscisfa.",
+      "image": "https://images.unsplash.com/photo-1587407627257-27b7127c868c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+      "emails_registered": [
+        "alicia@gmail.com",
+        "monica@gmail.com",
+        "david@yahoo.com",
+        "claire@ss.com"
+      ]
+    },
+    {
+      "id": "international-conference-on-industrial-design",
+      "title": "International Conference on Industrial Design",
+      "city": "barcelona",
+      "description": "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscisfa.",
+      "image": "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+      "emails_registered": [
+        "alicia@gmail.com",
+        "monica@gmail.com"
+      ]
+    },
+    {
+      "id": "world-congress-2022---barcelona",
+      "title": "World Congress 2022 - Barcelona",
+      "city": "barcelona",
+      "description": "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscisfa.",
+      "image": "https://images.unsplash.com/photo-1540575467063-178a50c2df87?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+      "emails_registered": [
+        "alicia@gmail.com",
+        "monica@gmail.com"
+      ]
+    },
+    {
+      "id": "riskminds-international",
+      "title": "RiskMinds International",
+      "city": "barcelona",
+      "description": "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscisfa.",
+      "image": "https://images.unsplash.com/photo-1591115765373-5207764f72e7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+      "emails_registered": [
+        "alicia@gmail.com",
+        "monica@gmail.com"
+      ]
+    },
+    {
+      "id": "singapore-grand-prix",
+      "title": "Singapore Grand Prix (Formula 1 Night Race)",
+      "city": "Singapore",
+      "description": "Experience the electrifying atmosphere of the world’s first Formula 1 night race, held on the Marina Bay Street Circuit, with a backdrop of dazzling city lights.",
+      "image": "",
+      "emails_registered": [
+        "alicia@gmail.com",
+        "monica@gmail.com"
+      ]
+    },
+    {
+      "id": "singapore-food-festival",
+      "title": "Singapore Food Festival",
+      "city": "Singapore",
+      "description": "A paradise for food lovers, this festival highlights Singapore’s diverse culinary heritage through street food markets, gourmet experiences, and chef collaborations.",
+      "image": "",
+      "emails_registered": [
+        "alicia@gmail.com",
+        "monica@gmail.com"
+      ]
+    },
+    {
+      "id": "national-day-parade",
+      "title": "National Day Parade",
+      "city": "Singapore",
+      "description": "A grand celebration of Singapore’s independence featuring a spectacular display of fireworks, military parades, and cultural performances.",
+      "image": "",
+      "emails_registered": [
+        "alicia@gmail.com",
+        "monica@gmail.com"
+      ]
+    },
+    {
+      "id": "singapore-art-week",
+      "title": "Singapore Art Week",
+      "city": "Singapore",
+      "description": "An annual celebration of contemporary and traditional art, featuring exhibitions, interactive installations, and street art displays throughout the city.",
+      "image": "",
+      "emails_registered": [
+        "alicia@gmail.com",
+        "monica@gmail.com"
+      ]
+    },
+    {
+      "id": "chery-blossom-festival",
+      "title": "Cherry Blossom Festival (Hanami)",
+      "city": "Tokyo",
+      "description": "A mesmerizing spring tradition where parks and streets are filled with blooming cherry blossoms, offering breathtaking scenery and lively picnics under the trees.",
+      "image": "",
+      "emails_registered": [
+        "alicia@gmail.com",
+        "monica@gmail.com"
+      ]
+    },
+    {
+      "id": "Tokyo-game-show",
+      "title": "Tokyo Game Show",
+      "city": "Tokyo",
+      "description": "One of the largest gaming conventions in the world, featuring the latest in video game technology, exclusive game demos, and exciting announcements from major developers.",
+      "image": "",
+      "emails_registered": [
+        "alicia@gmail.com",
+        "monica@gmail.com"
+      ]
+    },
+    {
+      "id": "sumo-grand-torunament",
+      "title": "Sumo Grand Tournament",
+      "city": "Tokyo",
+      "description": "Witness the power and tradition of Japan’s national sport as sumo wrestlers compete in thrilling matches at Ryōgoku Kokugikan.",
+      "image": "",
+      "emails_registered": [
+        "alicia@gmail.com",
+        "monica@gmail.com"
+      ]
+    },
+    {
+      "id": "shibuya-halloween-street-party",
+      "title": "Shibuya Halloween Street Party",
+      "city": "Tokyo",
+      "description": "Tokyo’s biggest Halloween celebration takes over the streets of Shibuya, where thousands of costumed revelers create a spectacular, energetic atmosphere.",
+      "image": "",
+      "emails_registered": [
+        "alicia@gmail.com",
+        "monica@gmail.com"
+      ]
+    },
+    {
+      "id": "tokyo-international-film-festival",
+      "title": "Tokyo International Film Festival",
+      "city": "Tokyo",
+      "description": "A prestigious event showcasing global cinema, where filmmakers and movie enthusiasts gather to celebrate storytelling through film.",
+      "image": "",
+      "emails_registered": [
+        "alicia@gmail.com",
+        "monica@gmail.com"
+      ]
+    },
+    {
+      "id": "budapest-spring-festival",
+      "title": "Budapest Spring Festival",
+      "city": "Budapest",
+      "description": "A celebration of art and culture, the Budapest Spring Festival hosts opera, classical music concerts, theater performances, and exhibitions in historic venues.",
+      "image": "",
+      "emails_registered": [
+        "alicia@gmail.com",
+        "monica@gmail.com"
+      ]
+    },
+    {
+      "id": "christmas-fair-at-vörösmarty-square",
+      "title": "Christmas Fair at Vörösmarty Square",
+      "city": "Budapest",
+      "description": "Budapest’s iconic Christmas market features beautifully decorated stalls, delicious traditional treats, and handcrafted gifts in the heart of the city.",
+      "image": "",
+      "emails_registered": [
+        "alicia@gmail.com",
+        "monica@gmail.com"
+      ]
+    },
+    {
+      "id": "formula-1-hungarian-grand-prix",
+      "title": "Formula 1 Hungarian Grand Prix",
+      "city": "Budapest",
+      "description": "The adrenaline-pumping Formula 1 Hungarian Grand Prix takes place at the Hungaroring, bringing motorsport enthusiasts from around the world for a weekend of high-speed racing action.",
+      "image": "",
+      "emails_registered": [
+        "alicia@gmail.com",
+        "monica@gmail.com"
+      ]
+    },
+    {
+      "id": "sziget-festival",
+      "title": "Sziget Festival",
+      "city": "Budapest",
+      "description": "One of Europe's largest music and cultural festivals, Sziget transforms Óbuda Island into a vibrant paradise featuring world-class music, art installations, and international performances.",
+      "image": "",
+      "emails_registered": [
+        "alicia@gmail.com",
+        "monica@gmail.com"
+      ]
+    },
+    {
+      "id": "budapest-wine-festival",
+      "title": "Budapest wine Festival",
+      "city": "Budapest",
+      "description": "Held at Buda Castle, this festival showcases Hungary's rich winemaking traditions, offering tastings of exquisite wines and breathtaking views of the Danube.",
+      "image": "",
+      "emails_registered": [
+        "alicia@gmail.com",
+        "monica@gmail.com"
+      ]
+    }
+  ]
 }
