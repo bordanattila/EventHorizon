@@ -40,7 +40,7 @@ export default async function CategoryPage({ params }: { params: { category: str
             >
               <div
                 className="image"
-                style={{ width: '50%', aspectRatio: '16/9', position: 'relative' }}
+                style={{ width: '100%', aspectRatio: '16/9', position: 'relative' }}
               >
                 <Image
                   src={event.image}
@@ -51,10 +51,10 @@ export default async function CategoryPage({ params }: { params: { category: str
                   priority
                 />
               </div>
-                <div className="content">
-                  <h2>{event.title}</h2>
-                  <p>{event.description}</p>
-                </div>
+              <div className="content">
+                <h2>{event.title}</h2>
+                <p>{event.description}</p>
+              </div>
             </Link>
           ))
         ) : (

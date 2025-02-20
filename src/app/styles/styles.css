@@ -182,6 +182,10 @@ footer {
     font-weight: bold;
 }
 
+.registration {
+    text-align: center;
+}
+
 /* Tablet and Desktop styles */
 @media (min-width: 768px) {
     .card {
@@ -195,7 +199,7 @@ footer {
     }
 
     .image {
-        width: 50%;
+        width: 50% !important;
         flex-shrink: 0;
     }
 
