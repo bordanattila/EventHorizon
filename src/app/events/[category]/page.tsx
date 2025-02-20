@@ -6,7 +6,7 @@ export async function generateStaticParams() {
   const { events_categories } = await import("../../../../public/data/data.json");
 
   return events_categories.map((category) => ({
-    params: { category: category.id },
+    category: category.id,
   }));
 }
 
@@ -14,7 +14,7 @@ export async function generateStaticParams() {
 export default async function CategoryPage({ params }: { params: { category: string } }) {
   const { allEvents } = await import("../../../../public/data/data.json");
 
-  const categoryParams = await params;
+  const categoryParams = params;
   const category = categoryParams?.category?.toLowerCase();
   const event_city = category.charAt(0).toUpperCase() + category.slice(1);
 
