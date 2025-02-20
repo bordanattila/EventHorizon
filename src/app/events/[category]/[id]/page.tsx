@@ -40,7 +40,7 @@ export default function SingleEvent() {
         if (!singleEvent) throw new Error("Event not found");
 
         setEvent(singleEvent);
-      } catch (error: any) {
+      } catch (error) {
         if (error instanceof Error) {
           setError(error.message);
         } else {
@@ -76,8 +76,10 @@ export default function SingleEvent() {
       }
       const data = await response.json();
       alert(data.message);
-    } catch (error: any) {
-      setError(`Error: ${error.message}`)
+    } catch (error) {
+      if (error instanceof Error) {
+        setError(`Error: ${error.message}`)
+      }
     }
   }
 
