@@ -13,6 +13,7 @@ interface Props {
     category: string;
     id: string;
   };
+  searchParams: { [key: string]: string | string[] | undefined };
 }
 
 
@@ -95,7 +96,7 @@ export async function generateStaticParams() {
   // if (error) return <p>Error: {error}</p>;
   // if (!event) return <p>Loading...</p>;
 
-  export default async function SingleEvent({ params }: Props) {
+  export default async function SingleEvent({ params, searchParams }: Props) {
     const { category, id } = params;
     
     const { allEvents } = await import("../../../../../public/data/data.json") as { allEvents: Event[] };
