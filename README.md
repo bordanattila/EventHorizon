@@ -3,6 +3,7 @@
 EventHorizon is a web application that allows users to browse events around the world and register for them if interested. The platform provides an intuitive interface to explore various events and manage registrations effortlessly.
 
 ## :trophy: Badges
+![eventhorizon](https://img.shields.io/github/languages/top/bordanattila/eventhorizon) 
 <img alt="Repo size" src="https://img.shields.io/github/repo-size/bordanattila/eventhorizon?color=information">
 
 ## Features
@@ -69,12 +70,8 @@ The following scripts are available:
         "typescript": "^5"
     }
 
-## Deployment
-
-The project will be deployed on Vercel. The deployment link will be added soon.
-
 ## Screenshots
 
-![alt text](./event-page.png)
+![alt text](./public/images/event-page.png)
 
 For any questions or issues, feel free to reach out!
