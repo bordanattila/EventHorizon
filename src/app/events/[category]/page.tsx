@@ -14,8 +14,8 @@ export async function generateStaticParams() {
 export default async function CategoryPage({ params }: { params: { category: string } }) {
   const { allEvents } = await import("../../../../public/data/data.json");
 
-  const categoryParams = params;
-  const category = categoryParams?.category?.toLowerCase();
+  // const categoryParams = params;
+  const category = params?.category?.toLowerCase();
   const event_city = category.charAt(0).toUpperCase() + category.slice(1);
 
   if (!category) {

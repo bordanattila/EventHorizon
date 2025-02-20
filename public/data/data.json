@@ -117,7 +117,9 @@
       "city": "san-francisco",
       "description": "FAN EXPO San Francisco is the ultimate pop culture convention, celebrating comics, anime, gaming, and sci-fi fandoms. With celebrity guests, artist alley, cosplay contests, and immersive experiences, this event offers something for fans of all ages. Whether you're meeting your favorite stars, shopping for exclusive merchandise, or participating in gaming tournaments, FAN EXPO is the perfect place to embrace your fandom and connect with like-minded enthusiasts.",
       "image": "https://images.unsplash.com/photo-1608889825103-eb5ed706fc64?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80",
-      "emails_registered": []
+      "emails_registered": [
+        "mail@mail.com"
+      ]
     },
     {
       "id": "san-francisco-opera---san-francisco-tickets",

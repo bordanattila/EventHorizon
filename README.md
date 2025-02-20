@@ -72,6 +72,7 @@ The following scripts are available:
 
 ## Screenshots
 
+![alt text](./public/images/home.png)
 ![alt text](./public/images/event-page.png)
 
 For any questions or issues, feel free to reach out!
