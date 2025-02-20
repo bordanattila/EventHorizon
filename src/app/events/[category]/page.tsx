@@ -6,7 +6,7 @@ export async function generateStaticParams() {
   const { events_categories } = await import("../../../../public/data/data.json");
 
   return events_categories.map((category) => ({
-    category: category.id,
+    params: { category: category.id },
   }));
 }
 
@@ -58,7 +58,7 @@ export default async function CategoryPage({ params }: { params: { category: str
             </Link>
           ))
         ) : (
-          <p>No events found in {params.category}</p>
+          <p>No events found in {event_city}</p>
         )}
       </div>
     </div>
