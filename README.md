@@ -1,8 +1,11 @@
-## EventHorizon
+# EventHorizon
 
 EventHorizon is a web application that allows users to browse events around the world and register for them if interested. The platform provides an intuitive interface to explore various events and manage registrations effortlessly.
 
-# Features
+## :trophy: Badges
+<img alt="Repo size" src="https://img.shields.io/github/repo-size/bordanattila/eventhorizon?color=information">
+
+## Features
 
 Browse global events by categories and locations
 
@@ -12,56 +15,66 @@ Responsive UI for seamless experience across devices
 
 Fast performance with Next.js and React 19
 
-# Tech Stack
+## Tech Stack
 
 Frontend: Next.js 15, React 19, React DOM 19
 
 Backend: API routes using Next.js
 
-Styling: (Add styling library if applicable)
+Styling: CSS
 
-# Deployment: Vercel (link will be provided after deployment)
+## Deployment: Vercel (link will be provided after deployment)
+[Deployed Application](https://bordanattila.github.io/EventHorizon/)
 
-# Installation
+## Installation
 
-Clone the repository:
+To get started with EventHorizon, follow these steps:
 
-git clone https://github.com/your-username/EventHorizon.git
-cd EventHorizon
+### Clone the repository
+`git clone` <repository_url>
+`cd EventHorizon`
 
-Install dependencies:
+### Install dependencies
+`npm install`
 
-npm install
+### Start the development server
+`npm run dev`
 
-Start the development server:
+#### Scripts
 
-npm run dev
+The following scripts are available:
 
-Deployment
+    `npm run dev` - Starts the development server using Next.js with Turbopack.
+
+    `npm run build` - Builds the production-ready application.
+
+    `npm run start `- Runs the application in production mode.
+
+    `npm run lint` - Runs ESLint to check for code issues.
+
+#### Dependencies
+
+    "dependencies": {
+        "next": "15.1.7",
+        "react": "^19.0.0",
+        "react-dom": "^19.0.0"
+    },
+    "devDependencies": {
+        "@eslint/eslintrc": "^3",
+        "@types/node": "^20",
+        "@types/react": "^19",
+        "@types/react-dom": "^19",
+        "eslint": "^9",
+        "eslint-config-next": "15.1.7",
+        "typescript": "^5"
+    }
+
+## Deployment
 
 The project will be deployed on Vercel. The deployment link will be added soon.
 
-API Endpoints
+## Screenshots
 
-(Add API documentation if applicable)
-
-Screenshots
-
-(Placeholder for screenshots)
-
-Contributing
-
-Contributions are welcome! If you’d like to contribute, please follow these steps:
-
-Fork the repository
-
-Create a new branch (git checkout -b feature-branch)
-
-Commit your changes (git commit -m 'Add new feature')
-
-Push to the branch (git push origin feature-branch)
-
-Open a pull request
-
+![alt text](./event-page.png)
 
 For any questions or issues, feel free to reach out!

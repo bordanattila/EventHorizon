@@ -5,7 +5,10 @@ const Header = () => {
   return (
     <header>
       <div className="topNav">
-        <Image className="logo" src="/images/brandlogov2.png" alt="app-logo" width={50} height={50} />
+        <Image className="logo" src="/images/logo.png" alt="app-logo" width={50} height={50} />
+      </div>
+      <div>
+        <h2 className="appName">EventHorizon</h2>
       </div>
       <div className="navLinks">
         <nav className="nav">
