@@ -4,14 +4,12 @@ import { Event } from "../../../../types/event";
 import EmailRegistrationForm from "../../../../components/email-registration";
 
 // Type for the page props
-interface Props {
+interface PageProps {
   params: {
     category: string;
     id: string;
   };
-  searchParams: { [key: string]: string | string[] | undefined };
 }
-
 
 // Generate static paths for each category
 export async function generateStaticParams() {
@@ -23,7 +21,7 @@ export async function generateStaticParams() {
   }));
 }
 
-export default async function SingleEvent({ params }: Props) {
+export default async function SingleEvent({ params }: PageProps) {
   const { category, id } = await params;
   const { allEvents } = await import("../../../../../public/data/data.json") as { allEvents: Event[] };
 
