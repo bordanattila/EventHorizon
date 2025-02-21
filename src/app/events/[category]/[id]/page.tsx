@@ -3,13 +3,13 @@ import { notFound } from "next/navigation";
 import { Event } from "../../../../types/event";
 import EmailRegistrationForm from "../../../../components/email-registration";
 
-// Type for the page props
-interface PageProps {
-  params: {
-    category: string;
-    id: string;
-  };
-}
+// // Type for the page props
+// interface PageProps {
+//   params: {
+//     category: string;
+//     id: string;
+//   };
+// }
 
 // Generate static paths for each category
 export async function generateStaticParams() {
@@ -21,7 +21,7 @@ export async function generateStaticParams() {
   }));
 }
 
-export default async function SingleEvent({ params }: PageProps) {
+export default async function SingleEvent({ params }: {params: { category: string; id: string }}) {
   const { category, id } = await params;
   const { allEvents } = await import("../../../../../public/data/data.json") as { allEvents: Event[] };
 
