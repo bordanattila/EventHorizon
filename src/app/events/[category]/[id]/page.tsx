@@ -3,13 +3,13 @@ import { notFound } from "next/navigation";
 import { Event } from "../../../../types/event";
 import EmailRegistrationForm from "../../../../components/email-registration";
 
-// // Type for the page props
-// interface PageProps {
-//   params: {
-//     category: string;
-//     id: string;
-//   };
-// }
+// Type for the page props
+interface PageProps {
+  params: {
+    category: string;
+    id: string;
+  };
+}
 
 // Generate static paths for each category
 export async function generateStaticParams() {
@@ -21,22 +21,24 @@ export async function generateStaticParams() {
   }));
 }
 
-export default async function SingleEvent({ params }: {params: { category: string; id: string }}) {
-  const { category, id } = await params;
-  const { allEvents } = await import("../../../../../public/data/data.json") as { allEvents: Event[] };
+export default async function SingleEvent(props: PageProps) {
+  const { category, id } = props.params;
+  
+  try{
+    const { allEvents } = await import("../../../../../public/data/data.json") as { allEvents: Event[] };
+    const foundEvent = allEvents.find(
+      (ev) => ev.id === id && ev.city.toLowerCase() === category.toLowerCase()
+    );
+    if (!foundEvent) {
+      notFound();
+    }
+  
 
-  const event = allEvents.find(
-    (event) => event.id === id && event.city.toLowerCase() === category.toLowerCase()
-  );
-
-  if (!event) {
-    notFound();
-  }
 
   return (
     <div>
       <div className="content locations">
-        <h1>{event.title}</h1>
+        <h1>{foundEvent.title}</h1>
       </div>
       <div className='single_event_page'>
         <div
@@ -44,8 +46,8 @@ export default async function SingleEvent({ params }: {params: { category: strin
           style={{ width: '100%', aspectRatio: '16/9', position: 'relative' }}
         >
           <Image
-            src={event.image}
-            alt={event.title}
+            src={foundEvent.image}
+            alt={foundEvent.title}
             sizes='(max-width: 768px) 50dvw, 100%'
             style={{ objectFit: 'cover' }}
             fill
@@ -53,13 +55,16 @@ export default async function SingleEvent({ params }: {params: { category: strin
           />
         </div>
         <div className="content locations">
-          <p>{event.description}</p>
+          <p>{foundEvent.description}</p>
         </div>
         <div className="registration">
-          <EmailRegistrationForm eventId={event.id} />
+          <EmailRegistrationForm eventId={foundEvent.id} />
         </div>
       </div>
     </div>
   )
-
+} catch (error) {
+  console.error('Error loading event:', error);
+  notFound();
+}
 }
