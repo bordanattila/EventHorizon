@@ -11,11 +11,11 @@ export async function generateStaticParams() {
 }
 
 // Dynamic page for events by category
-export default async function CategoryPage({ params }: { params: { category: string } }) {
+export default async function CategoryPage({ params }: { params: Promise<{ category: string }> }) {
   const { allEvents } = await import("../../../../public/data/data.json");
 
-  // const categoryParams = params;
-  const category = params?.category?.toLowerCase();
+  const {category} = await params;
+  // const category = params?.category?.toLowerCase();
   const event_city = category.charAt(0).toUpperCase() + category.slice(1);
 
   if (!category) {

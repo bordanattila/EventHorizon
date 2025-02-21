@@ -2,27 +2,39 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import { Event } from "../../../../types/event";
 import EmailRegistrationForm from "../../../../components/email-registration";
+// import type { PageProps } from "@/app/app.d";
 
 // Type for the page props
-interface PageProps {
-  params: {
-    category: string;
-    id: string;
-  };
-}
+// type SegmentParams = {
+//     category: string;
+//     id: string;
+// }
+
+// type Props = {
+//   params: Promise<SegmentParams>;
+//   // searchParams?: { [key: string]: string | string[] | undefined }
+//   searchParams?: Promise<any>;
+// }
+// interface PageProps {
+//   params: Promise<SegmentParams>;
+// }
 
 // Generate static paths for each category
 export async function generateStaticParams() {
-  const { allEvents } = await import("../../../../../public/data/data.json") as { allEvents: Event[] };
-
-  return allEvents.map((event) => ({
-    category: event.city.toLowerCase(),
-    id: event.id
-  }));
+  // const { allEvents } = await import("../../../../../public/data/data.json") as { allEvents: Event[] };
+  const { events_categories } = await import("../../../../../public/data/data.json");
+  // return allEvents.map((event) => ({
+  //   category: event.city.toLowerCase(),
+  //   id: event.id
+  // }));
+  return Promise.resolve(events_categories.map((category) => ({
+    params: { category: category.id },
+  })));
 }
 
-export default async function SingleEvent(props: PageProps) {
-  const { category, id } = props.params;
+export default async function SingleEvent({ params }: { params: Promise<{ category: string; id: string }> }) {
+  const { category, id } = await params;
+  // const searchParamsValue = await searchParams;
   
   try{
     const { allEvents } = await import("../../../../../public/data/data.json") as { allEvents: Event[] };
