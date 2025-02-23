@@ -1,5 +1,16 @@
-{
-  "events_categories": [
+import { connectToDatabase } from '../lib/mongodb.js';
+import EventModel from '../models/Event.js';
+import CategoryModel from '../models/Category.js';
+import dotenv from 'dotenv';
+
+dotenv.config();
+const seedData = async () => {
+  await connectToDatabase();
+
+  await EventModel.deleteMany();
+  await CategoryModel.deleteMany();
+
+  await CategoryModel.insertMany([
     {
       "id": "london",
       "title": "London – A City of Endless Possibilities",
@@ -36,8 +47,9 @@
       "description": "Tokyo’s event scene is a perfect blend of modern and traditional. Enjoy anime conventions, sumo wrestling tournaments, fashion week, and high-tech expos in the heart of Japan.",
       "image": "https://plus.unsplash.com/premium_photo-1661902398022-762e88ff3f82?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8dG9reW98ZW58MHx8MHx8fDA%3D"
     }
-  ],
-  "allEvents": [
+  ])
+
+  await EventModel.insertMany([
     {
       "id": "london-comic-con-winter",
       "title": "London Comic Con Winter",
@@ -345,5 +357,13 @@
         "monica@gmail.com"
       ]
     }
-  ]
-}
+  ]);
+
+  console.log('Database seeded!');
+  process.exit();
+};
+
+seedData().catch((err) => {
+  console.error("Seeding error:", err);
+  process.exit(1);
+});

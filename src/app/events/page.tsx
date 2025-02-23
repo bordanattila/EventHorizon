@@ -1,9 +1,10 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { getData } from './params';
+import getPropsFromDatabase from './params';
 
 export default async function Events() {
-  const data = await getData();
+  const {data} = await getPropsFromDatabase();
+  
   return (
     <div>
       <h1 className='locations'>Wonderful Event Locations</h1>

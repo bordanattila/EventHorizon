@@ -1,81 +1,47 @@
-import path from 'path';
-import fs from 'fs/promises';
+import { NextResponse } from 'next/server';
+import { connectToDatabase } from '@/lib/mongodb';
+import Event from '@/models/Event';
 
-// Constants
-const DATA_DIR = 'public/data';
-const DATA_FILE = 'data.json';
-
-// Types
-interface Event {
-    id: string;
-    emails_registered: string[];
-}
-
-interface Data {
-    events_categories: string;
-    allEvents: Event[];
-}
-
-// Helper functions
-function buildPath(): string {
-    const filePath = path.join(process.cwd(), DATA_DIR, DATA_FILE);
-    console.log("Resolved file path:", filePath);
-    return filePath;
-}
-
-async function extractData(filePath: string): Promise<Data> {
-    try {
-        const jsonData = await fs.readFile(filePath, 'utf8');
-        return JSON.parse(jsonData);
-    } catch (error) {
-        if (error instanceof Error) {
-            throw new Error(`Failed to read data from file: ${error.message}`);
-        }
-        throw new Error('Failed to read data from file: Unknown error occurred');
-    }
-}
-
+// Utility function to validate email
 function validateEmail(email: string): void {
-    if (!email || !email.includes('@')) {
-        throw new Error('Invalid email address');
-    }
+  if (!email || !email.includes('@')) {
+    throw new Error('Invalid email address');
+  }
 }
 
 export async function POST(req: Request) {
+  try {
+    await connectToDatabase();
+    
+    const body = await req.json();
+    const { email, eventId } = body;
 
-    try {
-        const filePath = buildPath();
-        
-        const data = await extractData(filePath); 
+    // Validate email
+    validateEmail(email);
 
-        if (!data.allEvents) {
-            return new Response(JSON.stringify({ message: 'Events data not found' }), { status: 404 });
-        }
+    // Find the event
+    const event = await Event.findOne({ id: eventId });
 
-        const body = await req.json();
-        const { email, eventId } = body;
-
-        validateEmail(email);
-
-        const event = data.allEvents.find((ev) => ev.id === eventId);
-        if (!event) {
-            throw new Error(`Event with ID ${eventId} not found`);
-        }
-
-        if (event.emails_registered.includes(email)) {
-            throw new Error('This email has already been registered');
-        }
-
-        event.emails_registered.push(email);
-
-        // **Save the updated data**
-        await fs.writeFile(buildPath(), JSON.stringify(data, null, 2));
-
-        return new Response(JSON.stringify({ message: 'Email registered successfully' }), { status: 201 });
-    } catch (error) {
-        if (error instanceof Error) {
-            console.error("Validation error:", error.message);
-            return new Response(JSON.stringify({ message: error.message }), { status: 422 });
-        }
+    if (!event) {
+      return NextResponse.json({ message: `Event not found` }, { status: 404 });
     }
+
+    // Check if email is already registered
+    if (event.emails_registered.includes(email)) {
+      return NextResponse.json({ message: 'This email is already registered' }, { status: 422 });
+    }
+
+    // Add email to the registered list
+    event.emails_registered.push(email);
+    await event.save();
+
+    return NextResponse.json({ message: 'Email registered successfully' }, { status: 201 });
+
+  } catch (error) {
+    console.error('Error:', error);
+    return NextResponse.json(
+      { message: error instanceof Error ? error.message : 'An unexpected error occurred' },
+      { status: 500 }
+    );
+  }
 }

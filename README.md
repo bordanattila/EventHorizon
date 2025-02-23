@@ -24,8 +24,8 @@ Backend: API routes using Next.js
 
 Styling: CSS
 
-## Deployment: Vercel (link will be provided after deployment)
-[Deployed Application](https://bordanattila.github.io/EventHorizon/)
+## Deployment: Vercel 
+[Deployed Application](https://event-horizon-sepia.vercel.app/)
 
 ## Installation
 

@@ -11,16 +11,14 @@ interface EventCategory {
 
 // Define the props type
 interface HomePageProps {
-    data: {
-        events_categories: EventCategory[];
-    };
+    data: EventCategory[];
 }
 
 const HomePage = ({ data }: HomePageProps) => {
     return (
         <div className="main">
             <div className="home_body">
-                {data.events_categories.map((ev, index) =>
+                {data.map((ev, index) =>
                     <Link
                         key={ev.id} href={`/events/${ev.id}`}
                         className={`card ${index % 2 === 1 ? 'card-reverse' : ''}`}

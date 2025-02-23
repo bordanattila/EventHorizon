@@ -1,38 +1,26 @@
 import Image from "next/image";
 import Link from "next/link";
-
-// Generate static paths for each category
-export async function generateStaticParams() {
-  const { events_categories } = await import("../../../../public/data/data.json");
-
-  return events_categories.map((category) => ({
-    params: { category: category.id },
-  }));
-}
+import getEventDetails from './params';
+import { notFound } from "next/navigation"
 
 // Dynamic page for events by category
-export default async function CategoryPage({ params }: { params: Promise<{ category: string }> }) {
-  const { allEvents } = await import("../../../../public/data/data.json");
-
-  const {category} = await params;
-  // const category = params?.category?.toLowerCase();
-  const event_city = category.charAt(0).toUpperCase() + category.slice(1);
-
-  if (!category) {
-    return (
-      <h1>Error: Category not found</h1>
-    )
-  }
-
+export default async function SingleCategory({ params }: { params: { category: string } }) {
+  const { category } = params;
+  const {cityEvents} = await getEventDetails();
+ 
   // Filter events based on the selected category (city)
-  const eventsInCategory = allEvents.filter((event) => event.city.toLowerCase() === category.toLowerCase());
+  const eventsAtLocation = cityEvents.filter((event) => event.city.toLowerCase() === category.toLowerCase());
+
+  if (eventsAtLocation.length === 0) {
+    return notFound(); // Returns a 404 if no events exist for the city
+  }
 
   return (
     <div>
-      <h1 className='locations'>Events in {event_city}</h1>
+      <h1 className='locations'>Events in {category}</h1>
       <div className="home_body">
-        {eventsInCategory.length > 0 ? (
-          eventsInCategory.map((event, index) => (
+        {eventsAtLocation.length > 0 ? (
+          eventsAtLocation.map((event, index) => (
             <Link
               key={event.id}
               href={`/events/${event.city.toLowerCase()}/${event.id}`}
@@ -58,7 +46,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
             </Link>
           ))
         ) : (
-          <p>No events found in {event_city}</p>
+          <p>No events found in {category}</p>
         )}
       </div>
     </div>
