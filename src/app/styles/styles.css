@@ -198,8 +198,8 @@ footer {
         flex-direction: row-reverse;
     }
 
-    .image {
-        width: 50%;
+    .smallerImage {
+        width: 50% !important;
         flex-shrink: 0;
     }
 

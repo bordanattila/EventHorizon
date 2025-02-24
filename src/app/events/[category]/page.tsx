@@ -8,12 +8,12 @@ import { PageProps } from "@/app/app";
 export default async function SingleCategory({ params }: PageProps<{ category: string }>) {
   const resolvedParams = await params;
   const { category } = resolvedParams;
-  const {cityEvents} = await EventsAtLocation();
+  const { cityEvents } = await EventsAtLocation();
   if (!category || Array.isArray(category)) {
     return notFound();
   }
   const normalizedCategory = category.toLowerCase();
- 
+
   // Filter events based on the selected category (city)
   const eventsAtLocation = cityEvents.filter((event) => event.city.toLowerCase() === normalizedCategory);
 
@@ -33,7 +33,7 @@ export default async function SingleCategory({ params }: PageProps<{ category: s
               className={`card ${index % 2 === 1 ? 'card-reverse' : ''}`}
             >
               <div
-                className="image"
+                className="image smallerImage"
                 style={{ width: '100%', aspectRatio: '16/9', position: 'relative' }}
               >
                 <Image
