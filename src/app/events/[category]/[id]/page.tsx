@@ -1,17 +1,39 @@
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import EmailRegistrationForm from "../../../../components/email-registration";
-import getEventDetails from '../params';
+import getEventDetails from './params';
+import type { SingleEvent } from './params';
+import type { PageProps } from "@/app/app";
 
-export default async function SingleEvent({ params }: { params: { category: string, id: string } }) {
+type EventParams = {
+  category: string;
+  id: string;
+};
+
+export async function generateStaticParams() {
   try {
-    if (!params?.id || !params?.category) {
-      throw new Error("Missing params");
+    const { cityEvents } = await getEventDetails("all");
+    return cityEvents.map((event) => ({
+      category: event.city.toLowerCase(),
+      id: event.id.toString(),
+    }));
+  } catch (error) {
+    console.error("Error in generateStaticParams:", error);
+    return [];
+  }
+}
+
+export default async function SingleEvent({ params }: PageProps<EventParams>) {
+    const { category, id } = await params;
+  
+    if (!category || !id) {
+      notFound();
     }
-
-    const { cityEvents } = await getEventDetails();
-    const selectedEvent = cityEvents.find((event) => event.id === params.id)
-
+    const normalizedCategory = Array.isArray(category) ? category[0] : category;
+    const cityName = normalizedCategory.charAt(0).toUpperCase() + normalizedCategory.slice(1);
+    const { cityEvents } = await getEventDetails(cityName);
+    const selectedEvent = cityEvents.find((event) => event.id === id);
+  
     if (!selectedEvent) {
       notFound();
     }
@@ -44,8 +66,4 @@ export default async function SingleEvent({ params }: { params: { category: stri
         </div>
       </div>
     )
-  } catch (error) {
-    console.error("Error loading event:", error);
-    notFound();
-  }
 }

@@ -1,7 +1,7 @@
 import { connectToDatabase } from "../../../lib/mongodb";
 import Event from "../../../models/Event";
 
-interface SingleEvent {
+export interface SingleEvent {
     id: string;
     title : string;
     city: string;
@@ -9,11 +9,14 @@ interface SingleEvent {
     image: string;
 }
 
-async function getEventDetails() {
+export interface EventsAtLocation {
+    cityEvents: SingleEvent[];
+}
+
+async function getEventsAtLocation(): Promise<EventsAtLocation> {
     await connectToDatabase();
     const eventsAtLocation = await Event.find({}, { _id: 0, __v: 0 }).lean();
-    const formattedEvents: SingleEvent[] = eventsAtLocation.map 
-    ((event) => ({
+    const formattedEvents: SingleEvent[] = eventsAtLocation.map((event) => ({
         id: event.id,
         title: event.title,
         city: event.city,
@@ -23,4 +26,4 @@ async function getEventDetails() {
     return { cityEvents: formattedEvents };
 }
 
-export default getEventDetails;
+export default getEventsAtLocation;

@@ -1,4 +1,4 @@
-import mongoose, { Schema, Model, Document } from 'mongoose';
+import mongoose, { Schema, Document } from 'mongoose';
 
 interface IEvent extends Document {
   id: string;

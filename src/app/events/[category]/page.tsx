@@ -1,15 +1,21 @@
 import Image from "next/image";
 import Link from "next/link";
-import getEventDetails from './params';
+import EventsAtLocation from './params';
 import { notFound } from "next/navigation"
+import { PageProps } from "@/app/app";
 
 // Dynamic page for events by category
-export default async function SingleCategory({ params }: { params: { category: string } }) {
-  const { category } = params;
-  const {cityEvents} = await getEventDetails();
+export default async function SingleCategory({ params }: PageProps<{ category: string }>) {
+  const resolvedParams = await params;
+  const { category } = resolvedParams;
+  const {cityEvents} = await EventsAtLocation();
+  if (!category || Array.isArray(category)) {
+    return notFound();
+  }
+  const normalizedCategory = category.toLowerCase();
  
   // Filter events based on the selected category (city)
-  const eventsAtLocation = cityEvents.filter((event) => event.city.toLowerCase() === category.toLowerCase());
+  const eventsAtLocation = cityEvents.filter((event) => event.city.toLowerCase() === normalizedCategory);
 
   if (eventsAtLocation.length === 0) {
     return notFound(); // Returns a 404 if no events exist for the city
